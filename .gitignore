@@ -1,3 +1,32 @@
-# System:
+# Archivos del Sistema Operativo
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDEs y Editores (a nivel de proyecto)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Archivos temporales
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.backup
+
+# Docker (si hay archivos de Docker a nivel raíz)
+.dockerignore
+
+# Variables de entorno a nivel de proyecto (si las hay)
+.env
+.env.local
+.env.*.local
