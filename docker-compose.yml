@@ -1,0 +1,47 @@
+services:
+  backend:
+    build:
+      context: ./Backend/rios-del-desierto=backend
+      dockerfile: Dockerfile
+    container_name: rios-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistir la base de datos SQLite
+      - ./Backend/rios-del-desierto=backend/instance:/app/instance
+    environment:
+      - FLASK_ENV=production
+      - HOST=0.0.0.0
+      - PORT=8000
+      - FLASK_DEBUG=0
+      - DATABASE_URL=sqlite:///instance/app.db
+    networks:
+      - rios-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./Frontend/rios-del-desierto-frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE=http://localhost:8000/api/v1
+    container_name: rios-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - rios-network
+    restart: unless-stopped
+
+networks:
+  rios-network:
+    driver: bridge
+
