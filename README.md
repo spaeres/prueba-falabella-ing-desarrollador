@@ -6,16 +6,36 @@ Aplicación web para la gestión de clientes, compras y reportes de fidelizació
 
 ### Features:
 
-### 1. Busqueda de un cliente por tipo y numero de documento:
+### 1. Búsqueda de un cliente por tipo y número de documento
+
+Esta funcionalidad permite buscar clientes en el sistema utilizando su tipo y número de documento de identificación. El sistema soporta tres tipos de documentos: **Cédula**, **NIT** y **Pasaporte**.
+
+**Explicación del pantallazo:**
+En la captura se puede observar la interfaz de búsqueda de clientes. En la parte superior se encuentra el encabezado con el título "Rios del Desierto S.A.S." y los botones de navegación centrados para alternar entre "Búsqueda de Clientes" y "Reportes de fidelización". El formulario de búsqueda muestra dos campos: un selector desplegable para elegir el tipo de documento (Cédula, NIT o Pasaporte) y un campo de texto para ingresar el número del documento. El botón "Buscar" permite ejecutar la consulta en la base de datos.
 <img width="875" height="525" alt="Captura de pantalla 2025-12-26 a la(s) 7 42 46 p m" src="https://github.com/user-attachments/assets/0a3d2d95-adfc-42e3-bce9-6d2cf679fea9" />
 
-### 2. Resultado de una busqueda de un documento de un cliente:
+### 2. Resultado de una búsqueda de un documento de un cliente
+
+Una vez realizada la búsqueda, el sistema muestra toda la información del cliente encontrado de forma organizada y legible. Esta vista incluye todos los datos personales y del documento del cliente.
+
+**Explicación del pantallazo:**
+La captura muestra el resultado exitoso de una búsqueda. Se visualiza una tarjeta (card) con el título "Datos del cliente" que contiene la información completa del cliente encontrado. Los datos se presentan en dos columnas mostrando: tipo de documento, número de documento, nombre, apellido, correo electrónico y teléfono celular. En la parte inferior de la tarjeta se encuentra el botón "Descargar datos" que permite exportar esta información en diferentes formatos. Además, se puede observar que el formulario de búsqueda se ha centrado automáticamente cuando se encuentra un cliente.
 <img width="1258" height="604" alt="Captura de pantalla 2025-12-26 a la(s) 7 43 06 p m" src="https://github.com/user-attachments/assets/8ab2bb33-0ead-4184-8d16-e393825f79a4" />
 
-### 3. Exportar la información del cliente encontrado en formato CSV / TXT o Excel:
+### 3. Exportar la información del cliente encontrado en formato CSV, TXT o Excel
+
+Esta funcionalidad permite exportar los datos del cliente a diferentes formatos de archivo para su uso externo, análisis o almacenamiento. El sistema ofrece tres opciones de exportación: CSV (valores separados por comas), TXT (texto plano) y Excel (formato .xlsx).
+
+**Explicación del pantallazo:**
+La captura muestra el modal de exportación que aparece al hacer clic en el botón "Descargar datos". El modal presenta tres opciones de formato mediante botones de radio (radio buttons): **EXCEL (.xlsx)**, **CSV (.csv)** y **TXT (.txt)**. El usuario puede seleccionar el formato deseado y luego hacer clic en "Confirmar y descargar" para obtener el archivo. El modal también muestra el nombre del cliente para confirmar que se está exportando la información correcta. En la parte inferior hay botones para cancelar o confirmar la acción.
 <img width="500" height="311" alt="Captura de pantalla 2025-12-26 a la(s) 7 43 13 p m" src="https://github.com/user-attachments/assets/e7d75569-1108-461b-a03d-68f7d29606bb" />
 
-### 4. Generar reporte de fidelidad de clientes:
+### 4. Generar reporte de fidelidad de clientes
+
+Esta funcionalidad genera un reporte completo en formato Excel con los clientes que han realizado compras superiores a 5'000.000 COP en el último mes. El reporte incluye información detallada de cada producto comprado por estos clientes fidelizados.
+
+**Explicación del pantallazo:**
+La captura muestra la vista de "Reportes de fidelización". En la parte superior se observa el encabezado con los botones de navegación, donde el botón "Reportes de fidelización" está activo (en verde). La sección principal contiene una tarjeta con el título "Reporte de fidelización" que incluye una descripción explicando que el reporte genera un archivo Excel con los datos básicos de cada cliente y el monto total de compras del último mes, incluyendo solo clientes cuyo total supere 5'000.000 COP. En el centro de la tarjeta se encuentra un botón verde "Descargar Excel" que al hacer clic genera y descarga automáticamente el reporte completo con todos los productos comprados por los clientes fidelizados.
 <img width="1207" height="488" alt="Captura de pantalla 2025-12-26 a la(s) 7 42 52 p m" src="https://github.com/user-attachments/assets/317532f4-e62c-49e9-a5cd-eadf82a185b2" />
 
 
