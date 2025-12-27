@@ -27,11 +27,11 @@ El modelo de datos incluye las siguientes entidades y sus relaciones:
 
 A continuación se muestra un video demostrativo del funcionamiento de la aplicación:
 
-<iframe src="https://player.vimeo.com/video/VIDEO_ID" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/1149557052" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-<p><a href="https://vimeo.com/VIDEO_ID">Ver video en Vimeo</a></p>
+<p><a href="https://vimeo.com/1149557052">Ver video en Vimeo</a></p>
 
-> **Nota**: Reemplaza `VIDEO_ID` con el ID de tu video de Vimeo. Para obtener el ID, ve a tu video en Vimeo y copia el número que aparece en la URL (ejemplo: si la URL es `https://vimeo.com/123456789`, el ID es `123456789`).
+> **Nota**: Si el video no se reproduce automáticamente, puedes descargarlo desde: [docs/EXPLICACION_FINAL_PRUEBA.mp4](docs/EXPLICACION_FINAL_PRUEBA.mp4)
 
 ## Requisitos
 
