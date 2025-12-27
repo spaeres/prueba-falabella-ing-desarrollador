@@ -4,6 +4,22 @@
 
 Aplicación web para la gestión de clientes, compras y reportes de fidelización de Rios del Desierto S.A.S.
 
+### Features:
+
+### 1. Busqueda de un cliente por tipo y numero de documento:
+<img width="875" height="525" alt="Captura de pantalla 2025-12-26 a la(s) 7 42 46 p m" src="https://github.com/user-attachments/assets/0a3d2d95-adfc-42e3-bce9-6d2cf679fea9" />
+
+### 2. Resultado de una busqueda de un documento de un cliente:
+<img width="1258" height="604" alt="Captura de pantalla 2025-12-26 a la(s) 7 43 06 p m" src="https://github.com/user-attachments/assets/8ab2bb33-0ead-4184-8d16-e393825f79a4" />
+
+### 3. Exportar la información del cliente encontrado en formato CSV / TXT o Excel:
+<img width="500" height="311" alt="Captura de pantalla 2025-12-26 a la(s) 7 43 13 p m" src="https://github.com/user-attachments/assets/e7d75569-1108-461b-a03d-68f7d29606bb" />
+
+### 4. Generar reporte de fidelidad de clientes:
+<img width="1207" height="488" alt="Captura de pantalla 2025-12-26 a la(s) 7 42 52 p m" src="https://github.com/user-attachments/assets/317532f4-e62c-49e9-a5cd-eadf82a185b2" />
+
+
+
 ## Arquitectura
 
 - **Backend**: Flask + SQLAlchemy (Python 3.11)
