@@ -25,7 +25,11 @@ El modelo de datos incluye las siguientes entidades y sus relaciones:
 
 ## Video de Prueba de funcionamiento
 
+A continuación se muestra un video demostrativo del funcionamiento de la aplicación:
 
+https://github.com/user-attachments/assets/EXPLICACION_FINAL_PRUEBA.mp4
+
+> **Nota**: Si el video no se reproduce automáticamente, puedes descargarlo desde: [docs/EXPLICACION_FINAL_PRUEBA.mp4](docs/EXPLICACION_FINAL_PRUEBA.mp4)
 
 ## Requisitos
 
@@ -47,6 +51,28 @@ El modelo de datos incluye las siguientes entidades y sus relaciones:
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:8000
    - Health Check: http://localhost:8000/health
+
+## Casos de Uso y Pruebas
+
+### Caso de Uso: Búsqueda de Cliente
+
+Para probar la aplicación, puedes buscar un cliente de ejemplo que viene incluido en el seed:
+
+- **Tipo de documento**: Cédula
+- **Número de documento**: `123456789`
+- **Cliente**: Juan Pérez
+
+Este cliente tiene compras registradas y puede ser utilizado para probar todas las funcionalidades de la aplicación.
+
+### Exportación de Datos
+
+Una vez que encuentres un cliente, puedes exportar su información en los siguientes formatos:
+
+- **CSV** (`.csv`): Formato de valores separados por comas, ideal para importar en hojas de cálculo
+- **TXT** (`.txt`): Archivo de texto plano con formato legible
+- **Excel** (`.xlsx`): Formato Excel de Microsoft Office, con formato y estructura de tabla
+
+Para exportar, simplemente haz clic en el botón "Descargar datos" que aparece cuando se encuentra un cliente y selecciona el formato deseado.
 
 ### Opción 2: Construir y ejecutar manualmente (NO SE RECOMIENDA)
 
@@ -175,7 +201,6 @@ El script `seed_db.py` crea los siguientes datos de ejemplo:
 - Si ya hay datos, el seed se omite para evitar duplicados
 - Para ejecutar el seed nuevamente, primero debes eliminar o limpiar la base de datos
 - El seed crea relaciones completas entre clientes, documentos, productos, compras y detalles de compra
-```
 
 ## Notas Importantes
 
