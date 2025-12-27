@@ -48,7 +48,7 @@ El modelo de datos incluye las siguientes entidades y sus relaciones:
    - Backend API: http://localhost:8000
    - Health Check: http://localhost:8000/health
 
-### Opción 2: Construir y ejecutar manualmente
+### Opción 2: Construir y ejecutar manualmente (NO SE RECOMIENDA)
 
 #### Backend
 
@@ -104,12 +104,86 @@ docker run -p 3000:80 rios-frontend
 └── docker-compose.yml
 ```
 
+## Base de Datos SQLite
+
+### Ubicación
+
+La base de datos SQLite se encuentra en:
+```
+Backend/rios-del-desierto=backend/instance/app.db
+```
+
+Este archivo se crea automáticamente cuando se ejecuta la aplicación por primera vez o cuando se ejecutan las migraciones. La carpeta `instance/` es donde Flask almacena archivos específicos de la instancia de la aplicación (como la base de datos en desarrollo).
+
+### Creación y Poblado de la Base de Datos
+
+#### 1. Crear las Tablas (Migraciones)
+
+Primero, es necesario crear las tablas en la base de datos ejecutando las migraciones:
+
+```bash
+cd Backend/rios-del-desierto=backend
+flask --app run.py db upgrade
+```
+
+Este comando aplica todas las migraciones pendientes y crea las tablas necesarias:
+- `clientes`
+- `documentos`
+- `productos`
+- `compras`
+- `detalles_compra`
+
+#### 2. Poblar la Base de Datos con Datos de Ejemplo (Seed)
+
+Una vez creadas las tablas, puedes poblar la base de datos con datos de ejemplo usando el script de seed:
+
+```bash
+cd Backend/rios-del-desierto=backend
+python seed_db.py
+```
+
+#### ¿Qué hace el seed?
+
+El script `seed_db.py` crea los siguientes datos de ejemplo:
+
+**Clientes:**
+- **Juan Pérez** - Cédula: 123456789
+  - Compras del último mes que superan 5'000.000 COP
+- **María González** - Cédula: 987654321
+  - Compras del último mes que superan 5'000.000 COP (6'100.000 COP)
+- **Pedro Martínez** - Cédula: 456789123
+  - Compras del último mes que NO superan 5'000.000 COP (4'100.000 COP)
+- **Ana Rodríguez** - Pasaporte: AB123456
+  - Cliente con pasaporte, compra de 2'500.000 COP
+- **Empresa Comercial S.A.S.** - NIT: 900123456-7
+  - Cliente empresa con NIT, compra grande de 8'500.000 COP
+
+**Productos:**
+- Televisor 65 pulgadas: $3'000.000 COP
+- Portátil Gamer: $2'500.000 COP
+- Barra de Sonido: $600.000 COP
+
+**Compras:**
+- Se crean compras de ejemplo para cada cliente
+- Algunas compras son del último mes (últimos 30 días)
+- Algunas compras son más antiguas (para pruebas)
+- Los montos están configurados para probar el reporte de fidelización
+
+#### Notas sobre el Seed
+
+- El script verifica si ya existen datos en la base de datos antes de ejecutarse
+- Si ya hay datos, el seed se omite para evitar duplicados
+- Para ejecutar el seed nuevamente, primero debes eliminar o limpiar la base de datos
+- El seed crea relaciones completas entre clientes, documentos, productos, compras y detalles de compra
+```
+
 ## Notas Importantes
 
 - La base de datos SQLite se persiste en `Backend/rios-del-desierto=backend/instance/app.db`
 - El backend se inicia primero y el frontend espera a que esté saludable
 - El frontend está configurado para comunicarse con el backend en `http://localhost:8000/api/v1`
 - Si cambias el puerto del backend, actualiza `VITE_API_BASE` en el Dockerfile del frontend
+- En Docker, la base de datos se persiste mediante un volumen montado en `instance/`
 
 ## Desarrollo Local (sin Docker)
 
