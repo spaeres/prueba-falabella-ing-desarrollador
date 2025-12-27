@@ -27,11 +27,15 @@ El modelo de datos incluye las siguientes entidades y sus relaciones:
 
 A continuación se muestra un video demostrativo del funcionamiento de la aplicación:
 
-<iframe src="https://player.vimeo.com/video/1149557052" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+[![Video de demostración](https://img.shields.io/badge/Ver%20Video%20en%20Vimeo-1AB7EA?style=for-the-badge&logo=vimeo&logoColor=white)](https://vimeo.com/1149557052)
 
-<p><a href="https://vimeo.com/1149557052">Ver video en Vimeo</a></p>
+<div align="center">
+  <a href="https://vimeo.com/1149557052">
+    <img src="https://i.vimeocdn.com/video/1149557052" alt="Video de demostración" width="640">
+  </a>
+</div>
 
-> **Nota**: Si el video no se reproduce automáticamente, puedes descargarlo desde: [docs/EXPLICACION_FINAL_PRUEBA.mp4](docs/EXPLICACION_FINAL_PRUEBA.mp4)
+> **Nota**: Haz clic en la imagen o en el botón para ver el video completo en Vimeo. También puedes descargarlo desde: [docs/EXPLICACION_FINAL_PRUEBA.mp4](docs/EXPLICACION_FINAL_PRUEBA.mp4)
 
 ## Requisitos
 
