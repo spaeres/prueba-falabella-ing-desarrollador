@@ -29,7 +29,11 @@ Esta funcionalidad permite exportar los datos del cliente a diferentes formatos 
 **Explicación del pantallazo:**
 La captura muestra el modal de exportación que aparece al hacer clic en el botón "Descargar datos". El modal presenta tres opciones de formato mediante botones de radio (radio buttons): **EXCEL (.xlsx)**, **CSV (.csv)** y **TXT (.txt)**. El usuario puede seleccionar el formato deseado y luego hacer clic en "Confirmar y descargar" para obtener el archivo. El modal también muestra el nombre del cliente para confirmar que se está exportando la información correcta. En la parte inferior hay botones para cancelar o confirmar la acción.
 
+<div align="center">
+
 <img width="500" height="311" alt="Captura de pantalla 2025-12-26 a la(s) 7 43 13 p m" src="https://github.com/user-attachments/assets/e7d75569-1108-461b-a03d-68f7d29606bb" />
+
+</div>
 
 ### 4. Generar reporte de fidelidad de clientes
 
